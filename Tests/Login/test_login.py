@@ -10,9 +10,9 @@ def test_valid_user_login():
     POST /login
     Validation for successful user login
     """
-    # registering user with valid data
+    # registering new user with valid random data
     DemoblazeApi.signup_user(VALID_USER_LOGIN['INPUT_REQUEST_BODY'])
-    # logging the user
+    # user log in
     response = DemoblazeApi.login_user(VALID_USER_LOGIN['INPUT_REQUEST_BODY'])
     result = response.json()
 
